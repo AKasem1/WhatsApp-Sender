@@ -19,7 +19,6 @@ with open(textFile, "r", encoding="utf-8") as file:
 
 i = 1
 for num in phone_numbers:
-    # Add the correct country code if necessary
     if str(num)[0] == "0":
         num = "+2" + str(num)
     elif str(num)[0] == "1":
@@ -35,7 +34,7 @@ for num in phone_numbers:
     kit.sendwhats_image(num, image, content)
 
     # Ensure sufficient delay before pressing enter
-    time.sleep(8)  # Adjust this delay if needed (increase if needed)
+    time.sleep(8) 
 
     # Press enter to send the message
     pyautogui.press('enter')
